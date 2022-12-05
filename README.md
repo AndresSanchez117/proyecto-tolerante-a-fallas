@@ -192,6 +192,16 @@ Para detener los fallos en el servicio puedes ejecutar:
 
 `./bin/chaos.sh 500 delete`
 
+Podemos intentar eliminar un pod tal como el de catálogo primero revisando su nombre con:
+
+`kubectl get pod`
+
+Y a continuación eliminarlo:
+
+`kubectl delete pod catalog-5c7f8f8447-6tsc4`
+
+Si vemos nuestras peticiones al servicio durante un momento fallarán todas, pero poco después Kubernetes vuelve a crear el pod automáticamente.
+
 ## Referencias:
 
 - Posta, C. E., & Maloku, R. (2022). Istio in action. Manning Publications Co.
